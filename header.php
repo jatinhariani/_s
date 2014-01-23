@@ -23,16 +23,49 @@
 	<?php do_action( 'before' ); ?>
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 col-lg-12">
+						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a> <small class="site-description"><?php bloginfo('site-description'); ?></small></h1>
+					</div>
+				</div>
+			</div>
 		</div>
-
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<h1 class="menu-toggle"><?php _e( 'Menu', '_s' ); ?></h1>
-			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', '_s' ); ?></a>
-
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-		</nav><!-- #site-navigation -->
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-lg-12">
+					<div id="site-navigation" class="main-navigation" role="navigation">
+						<h1 class="menu-toggle"><?php _e( 'Menu', '_s' ); ?></h1>
+						<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', '_s' ); ?></a>
+						<?php // wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+						<nav class="navbar navbar-default" role="navigation">
+						  <!-- Brand and toggle get grouped for better mobile display -->
+						  <div class="navbar-header">
+						    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#primary-menu-container">
+						      <span class="sr-only">Toggle navigation</span>
+						      <span class="icon-bar"></span>
+						      <span class="icon-bar"></span>
+						      <span class="icon-bar"></span>
+						    </button>
+						  </div>
+							<?php
+							    wp_nav_menu( array(
+							        'menu'              => 'primary',
+							        'theme_location'    => 'primary',
+							        'depth'             => 2,
+							        'container'         => 'div',
+							        'container_id'      => 'primary-menu-container',
+							        'container_class'   => 'collapse navbar-collapse navbar-ex1-collapse',
+							        'menu_class'        => 'nav navbar-nav',
+							        'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+							        'walker'            => new wp_bootstrap_navwalker())
+							    );
+							?>
+						</nav>
+					</div><!-- #site-navigation -->
+				</div>
+			</div>
+		</div>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

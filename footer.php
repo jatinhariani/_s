@@ -11,12 +11,18 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<?php do_action( '_s_credits' ); ?>
-			<a href="http://wordpress.org/" rel="generator"><?php printf( __( 'Proudly powered by %s', '_s' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', '_s' ), '_s', '<a href="http://automattic.com/" rel="designer">Automattic</a>' ); ?>
-		</div><!-- .site-info -->
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-lg-12">
+					<div class="site-info">
+						<?php do_action( '_s_credits' ); ?>
+						<a href="http://wordpress.org/" rel="generator"><?php printf( __( 'Proudly powered by %s', '_s' ), 'WordPress' ); ?></a>
+						<span class="sep"> | </span>
+						<?php printf( __( 'Theme: %1$s by %2$s.', '_s' ), '_s', '<a href="http://automattic.com/" rel="designer">Automattic</a>' ); ?>
+					</div><!-- .site-info -->
+				</div>
+			</div>
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

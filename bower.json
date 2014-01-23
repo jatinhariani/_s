@@ -1,0 +1,21 @@
+{
+  "name": "_s_bootstrap",
+  "version": "0.1.0",
+  "homepage": "https://github.com/jatinhariani/_s_bootstrap",
+  "authors": [
+    "jtnh321@gmail.com"
+  ],
+  "description": "Starter bootstrapped theme for WordPress development",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.0.3"
+  }
+}
