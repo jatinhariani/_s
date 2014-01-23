@@ -48,7 +48,7 @@ if ( post_password_required() ) {
 				 * define _s_comment() and that will be used instead.
 				 * See _s_comment() in inc/template-tags.php for more.
 				 */
-				wp_list_comments( array( 'callback' => '_s_comment' ) );
+				wp_list_comments( array( 'callback' => '_s_comment' , 'avatar_size' => 64) );
 			?>
 		</ol><!-- .comment-list -->
 
@@ -68,7 +68,11 @@ if ( post_password_required() ) {
 	?>
 		<p class="no-comments"><?php _e( 'Comments are closed.', '_s' ); ?></p>
 	<?php endif; ?>
-
-	<?php comment_form(); ?>
+	<?php
+		$comment_form_args = array(
+			'comment_field' => '<div class="comment-form-comment form-group"><label for="comment">' . _x( 'Comment', '_s' ) . '</label><textarea id="comment" class="form-control" name="comment" cols="45" rows="8" aria-required="true"></textarea></div>'
+			);
+	?>
+	<?php comment_form($comment_form_args); ?>
 
 </div><!-- #comments -->
