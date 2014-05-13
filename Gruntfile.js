@@ -36,7 +36,8 @@ module.exports = function(grunt) {
     uglify: {
       production: {
         files: {
-          'js/bootstrap.min.js': 'bower_components/bootstrap/dist/js/bootstrap.js'
+          'js/bootstrap.min.js': 'bower_components/bootstrap/dist/js/bootstrap.js',
+          'js/respond.min.js': 'bower_components/respond/dest/respond.min.js'
         }
       }
     }
