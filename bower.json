@@ -18,6 +18,7 @@
   "dependencies": {
     "bootstrap": "~3.0.3",
     "respond": "~1.4.2",
-    "modernizr": "~2.8.1"
+    "modernizr": "~2.8.1",
+    "background-size-polyfill": "~0.2.0"
   }
 }

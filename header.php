@@ -10,6 +10,7 @@
 <html <?php language_attributes(); ?>>
 <head>
 
+    <script src="<?php echo get_template_directory_uri(); ?>/js/html5shiv.min.js"></script>
     <!--[if lt IE 9]>
     <script src="<?php echo get_template_directory_uri(); ?>/js/html5shiv.min.js"></script>
     <![endif]-->
