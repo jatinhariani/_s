@@ -53,6 +53,9 @@ function _s_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
+
+    add_theme_support( 'woocommerce' );
+
 }
 endif; // _s_setup
 add_action( 'after_setup_theme', '_s_setup' );
