@@ -124,3 +124,5 @@ require get_template_directory() . '/inc/jetpack.php';
 require get_template_directory() . '/inc/wp_bootstrap_navwalker.php';
 
 require get_template_directory() . '/inc/bs_filters_actions.php';
+
+require get_template_directory() . '/inc/woocommerce-functions.php';

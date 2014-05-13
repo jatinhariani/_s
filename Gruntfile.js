@@ -13,13 +13,13 @@ module.exports = function(grunt) {
         files: ['*.php', '**/*.php']
       },
       css: {
-        files:['style.css']
+        files:['style.css', 'css/**/*.css'],
       },
       less: {
         options: {
           livereload: false
         },
-        files:['less/*.less'],
+        files:['less/**/*.less'],
         tasks:['less']
       },
     },
@@ -28,7 +28,8 @@ module.exports = function(grunt) {
     less: {
       production: {
         files: {
-          "style.css": "less/style.less"
+          "style.css": "less/style.less",
+          "css/woocommerce/archive-product.css": "less/woocommerce/archive-product.less"
         }
       }
     },
