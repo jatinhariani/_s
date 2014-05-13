@@ -16,7 +16,6 @@ get_header( 'shop' ); ?>
 <div class="container">
     <div class="row">
         <div class="col-md-4">
-
             <?php
             /**
              * woocommerce_sidebar hook
@@ -50,16 +49,17 @@ get_header( 'shop' ); ?>
                     <?php do_action( 'woocommerce_archive_description' ); ?>
 
                     <?php if ( have_posts() ) : ?>
-
-                        <?php
-                        /**
-                         * woocommerce_before_shop_loop hook
-                         *
-                         * @hooked woocommerce_result_count - 20
-                         * @hooked woocommerce_catalog_ordering - 30
-                         */
-                        do_action( 'woocommerce_before_shop_loop' );
-                        ?>
+                        <div class="row">
+                            <?php
+                            /**
+                             * woocommerce_before_shop_loop hook
+                             *
+                             * @hooked woocommerce_result_count - 20
+                             * @hooked woocommerce_catalog_ordering - 30
+                             */
+                            do_action( 'woocommerce_before_shop_loop' );
+                            ?>
+                        </div>
 
                         <?php woocommerce_product_loop_start(); ?>
 
@@ -71,7 +71,7 @@ get_header( 'shop' ); ?>
 
                         <?php endwhile; // end of the loop. ?>
 
-                        <?php woocommerce_product_loop_end(); ?>
+                        <?php woocommerce_product_loop_end(); ?>                      </div>
 
                         <?php
                         /**
