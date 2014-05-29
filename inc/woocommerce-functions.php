@@ -18,3 +18,15 @@ function _s__woocommerce_scripts() {
 add_action( 'wp_enqueue_scripts', '_s__woocommerce_scripts' );
 
 add_filter( 'loop_shop_per_page', create_function( '$cols', 'return 12;' ), 12 );
+
+add_filter( 'woocommerce_breadcrumb_defaults', '_s__woocommerce_breadcrumbs' );
+function _s__woocommerce_breadcrumbs() {
+    return array(
+        'delimiter'   => '',
+        'wrap_before' => '<ul class="breadcrumb">',
+        'wrap_after'  => '</ul>',
+        'before'      => '<li>',
+        'after'       => '</li>',
+        'home'        => _x( 'Home', 'breadcrumb', 'woocommerce' ),
+    );
+}
