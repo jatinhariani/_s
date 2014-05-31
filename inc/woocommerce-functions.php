@@ -30,3 +30,11 @@ function _s__woocommerce_breadcrumbs() {
         'home'        => _x( 'Home', 'breadcrumb', 'woocommerce' ),
     );
 }
+
+add_filter('woocommerce_checkout_fields', '_s_woocommerce_billing_fields');
+function _s_woocommerce_billing_fields($fields) {
+    foreach($fields as $key => $value) :
+    endforeach;
+//    die;
+    return $fields;
+}
